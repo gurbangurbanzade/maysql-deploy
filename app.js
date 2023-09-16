@@ -2,8 +2,12 @@ const express = require("express");
 const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 const app = express();
+var cors = require("cors");
+
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(cors());
+
 // app.get("/student", function (req, res) {
 //   res.send("salam");
 // });
